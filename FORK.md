@@ -15,9 +15,10 @@ pod nim świat trzyma bestiariusz (dziennik i ustawienia modułu). Motywy daje f
   z listą umiejętności w zapisie języka klienta (`game.i18n.getListFormatter`, alternatywa); oryginał składał je po
   angielsku i nie dawał "or" przed ostatnią umiejętnością.
 - Typ obrażeń w ataku to zapis systemu w formule obrażeń (`CONFIG.PF2E.damageRollFlavors`), nie slug.
-- `module.json` bez `manifest` i `download` oryginału, więc aktualizacja Foundry nie podmieni forka; wersja to wydanie
-  oryginału z czwartym członem (`1.3.10.1`). Wersja danych (`currentVersion` w `scripts/setup.js`, migracje
-  bestiariusza) zostaje wersją oryginału.
+- `module.json` bez `manifest` i `download` oryginału, także w relacji wymagającej Theming, więc aktualizacja
+  Foundry nie podmieni forka ani jego zależności oryginałem; wersja to wydanie oryginału z czwartym członem
+  (`1.3.10.2`). Wersja danych (`currentVersion` w `scripts/setup.js`, migracje bestiariusza) zostaje wersją
+  oryginału.
 
 ## Build i wdrożenie
 
