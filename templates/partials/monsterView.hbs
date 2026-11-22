@@ -443,7 +443,7 @@
                             <div class="data-icon primary-icon">
                                 <i class="fa-solid fa-book"></i>
                             </div>
-                            <div class="flex-value">{{localize "Recall Knowledge"}}</div>
+                            <div class="flex-value">{{localize "PF2E.RecallKnowledge.Label"}}</div>
                         </div>
                     </div>
                     <div class="data-body primary-border-container">
@@ -658,7 +658,7 @@
                                                         {{#if ../../detailedInformation.damageTypes}}data-action="toggleRevealed"{{/if}}
                                                         data-path="{{concat 'system.attacks.' @../key '.damageInstances.' key '.damageType'}}"
                                                     >
-                                                        {{instance.damageType.value}}
+                                                        {{PF2EBTDamageType instance.damageType.value}}
                                                     </span>
                                                 </div>
                                             {{/each}}
@@ -706,7 +706,7 @@
                                                             {{#if (or this.damageType.revealed (not ../../detailedInformation.damageTypes))}}
                                                                 &nbsp;
                                                                 <span>
-                                                                    {{this.damageType.value}}
+                                                                    {{PF2EBTDamageType this.damageType.value}}
                                                                 </span>
                                                             {{/if}}
                                                         </div>
@@ -935,8 +935,8 @@
                                     {{#if (or ../../gmView this.revealed)}}
                                         <tr class="spell-header-row tertiary-container {{#if ../../gmView}}primary-hover-container{{/if}}" {{#if ../../gmView}}data-action="toggleAllRevealed"{{/if}} data-path="{{concat "system.spells.entries." @../key ".levels." this.key}}" data-type="spell-level" data-entry-value="{{@../key}}" data-spell-level="{{this.value}}">
                                             <th class="spell-name-cell">{{this.label}}</th>
-                                            <th class="spell-cell defense">{{localize "Defense"}}</th>
-                                            <th class="spell-cell range">{{localize "Range"}}</th>
+                                            <th class="spell-cell defense">{{localize "PF2E.Item.Spell.Defense.Label"}}</th>
+                                            <th class="spell-cell range">{{localize "PF2E.TraitRange"}}</th>
                                         </tr>
                                         {{#each this.spells}}
                                             {{#if (or ../../../gmView this.revealed)}}

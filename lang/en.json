@@ -73,6 +73,9 @@
     },
     "LinkMenu": {
       "Title": "Actor Link Menu",
+      "LinkedActors": "Linked Actors",
+      "DuplicateActors": "Duplicate Actors",
+      "NoDuplicates": "No duplicates. Drag in actors or import.",
       "DuplicatesLinkedInfo": "{nr} duplicate actors linked",
       "NewLink": "New Link",
       "NewLinkTip": "Drag In Actor To Link",
@@ -96,6 +99,7 @@
     },
     "Miscellaneous": {
       "Name": "Name",
+      "InvalidBestiaryLink": "Invalid Bestiary Link",
       "Blurb": "Name Info",
       "Title": "Title",
       "Level": "Level",

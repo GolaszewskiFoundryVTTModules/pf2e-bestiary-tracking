@@ -187,7 +187,7 @@
                         </div>
                         {{#if (and this.optionalFields.birthplace)}}
                             <div class="data-header-label {{#if this.gmView}}{{PF2EBTToggleContainer this.gmView this.general.birthplace}}{{/if}}" style="{{PF2EBTToggleContainerOverride this.gmView this.contrastRevealedState this.general.birthplace}}" data-action="toggleRevealed" data-path="system.npcData.general.birthplace">
-                                <div class="flex-value"><strong>{{localize "Birthplace"}}:</strong></div>
+                                <div class="flex-value"><strong>{{localize "PF2EBestiary.Menus.BestiaryDisplay.OptionalFields.Birthplace"}}:</strong></div>
                                 {{#if (or this.gmView this.general.birthplace.revealed)}}<div>{{this.general.birthplace.value}}</div>{{else}}?{{/if}}
                             </div>
                         {{/if}}

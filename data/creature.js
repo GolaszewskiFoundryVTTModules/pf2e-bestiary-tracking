@@ -818,23 +818,20 @@ export class Creature extends foundry.abstract.TypeDataModel {
         });
       }
     });
-    const label = Array.from(skills)
-      .sort(alphaSort)
-      .reduce((acc, skill, index) => {
-        if (skills.length > 0 && index === skills.length - 1)
-          acc = `${acc} or ${skill}`;
-        else if (index > 0) acc = `${acc}, ${skill}`;
-        else acc = acc.concat(skill);
+    if (skills.size === 0) return null;
 
-        return acc;
-      }, "");
-
-    if (!label) return null;
-
+    // The system's own NPC identification label, with the skills listed the client language's way ("a, b, or c")
+    const label = game.i18n
+      .getListFormatter({ type: "disjunction" })
+      .format(Array.from(skills).sort(alphaSort));
     const rarityModifier = rarityModificationTable[this.rarity.value];
     const dc =
       levelDCTable[this.level.value] + Number.parseInt(rarityModifier.value);
-    return `${label}: DC ${dc} (${game.i18n.localize(rarityModifier.label)})`;
+    return game.i18n.format("PF2E.Actor.NPC.Identification.Skills.Label", {
+      skills: label,
+      dc,
+      adjustment: game.i18n.localize(rarityModifier.label),
+    });
   }
 
   get recallKnowledgeSpecific() {
@@ -857,7 +854,12 @@ export class Creature extends foundry.abstract.TypeDataModel {
       (Number.parseInt(baselineModDC.value) -
         Number.parseInt(applicableModDC.value));
 
-    return `Applicable Lore: DC ${applicableDC} (${game.i18n.localize(applicableModDC.label)}) or DC ${baselineDC} (${game.i18n.localize(baselineModDC.label)})`;
+    return game.i18n.format("PF2E.Actor.NPC.Identification.Lore.Label", {
+      dc1: applicableDC,
+      adjustment1: game.i18n.localize(applicableModDC.label),
+      dc2: baselineDC,
+      adjustment2: game.i18n.localize(baselineModDC.label),
+    });
   }
 
   async importData(creaturePage) {

@@ -8,3 +8,5 @@ packs/**/LOG
 packs/**/MANIFEST-*
 node_modules
 BestiaryTracking.js.map
+dist/
+.deploy-state/

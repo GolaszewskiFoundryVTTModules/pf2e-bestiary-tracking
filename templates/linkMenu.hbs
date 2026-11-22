@@ -2,7 +2,7 @@
     <div class="menu-container standard-form">
         <fieldset class="menu-section">
             <legend>
-                <h4 class="actor-links-title flexrow">{{localize "Linked Actors"}}</h4>
+                <h4 class="actor-links-title flexrow">{{localize "PF2EBestiary.LinkMenu.LinkedActors"}}</h4>
             </legend>
             <div class="actor-links-container">
                 {{#each actorLinks}}
@@ -11,7 +11,7 @@
                             <div>{{this.name}}</div>
                             <div>
                                 {{#if (not this.current)}}<i class="name-pre-icon fa-solid fa-circle-xmark pf2e-bestiary-clickable-icon" data-action="removeActorLink" data-actor="{{this.actor}}" data-page="{{this.page}}"></i>{{/if}}
-                                {{localize "Level"}} {{this.level}}{{#if this.active}}
+                                {{localize "PF2EBestiary.Miscellaneous.Level"}} {{this.level}}{{#if this.active}}
                                 <i class="name-post-icon fa-solid fa-star"></i>{{/if}}
                             </div>
                         </div>
@@ -42,14 +42,14 @@
         <fieldset class="menu-section duplicate-section">
             <legend>
                 <h4 class="actor-links-title flexrow">
-                    <span>{{localize "Duplicate Actors"}}</span>
+                    <span>{{localize "PF2EBestiary.LinkMenu.DuplicateActors"}}</span>
                     <button class="flex0" data-action="importDuplicates"><i class="fa-solid fa-spaghetti-monster-flying"></i> Import</button>
                 </h4>
             </legend>
 
             <div class="duplicate-container">
                 <div class="duplicate-row">
-                    <div>{{#if (eq (PF2EBTNrKeys this.duplicates) 0)}}{{localize "No duplicates. Drag in actors or import."}}{{else}}{{localize "PF2EBestiary.LinkMenu.DuplicatesLinkedInfo" nr=(PF2EBTNrKeys this.duplicates)}}{{/if}}</div>
+                    <div>{{#if (eq (PF2EBTNrKeys this.duplicates) 0)}}{{localize "PF2EBestiary.LinkMenu.NoDuplicates"}}{{else}}{{localize "PF2EBestiary.LinkMenu.DuplicatesLinkedInfo" nr=(PF2EBTNrKeys this.duplicates)}}{{/if}}</div>
                     <i class="fa-solid {{#if this.duplicateListOpen}}fa-chevron-down{{else}}fa-chevron-up{{/if}} pf2e-bestiary-clickable-icon" data-action="toggleDuplicateList"></i>
                 </div>
                 <div class="duplicate-list {{#if this.duplicateListOpen}}expanded{{/if}}">

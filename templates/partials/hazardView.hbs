@@ -581,7 +581,7 @@
                                                         {{#if ../../detailedInformation.damageTypes}}data-action="toggleRevealed"{{/if}}
                                                         data-path="{{concat 'system.attacks.' @../key '.damageInstances.' key '.damageType'}}"
                                                     >
-                                                        {{instance.damageType.value}}
+                                                        {{PF2EBTDamageType instance.damageType.value}}
                                                     </span>
                                                 </div>
                                             {{/each}}
@@ -629,7 +629,7 @@
                                                             {{#if (or this.damageType.revealed (not ../../detailedInformation.damageTypes))}}
                                                                 &nbsp;
                                                                 <span>
-                                                                    {{this.damageType.value}}
+                                                                    {{PF2EBTDamageType this.damageType.value}}
                                                                 </span>
                                                             {{/if}}
                                                         </div>

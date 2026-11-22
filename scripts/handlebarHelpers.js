@@ -15,7 +15,15 @@ export default class RegisterHandlebarsHelpers {
       PF2EBTEven: this.even,
       PF2EBTTest: this.test,
       PF2EBTIncludes: this.includes,
+      PF2EBTDamageType: this.damageType,
     });
+  }
+
+  /* A damage type as the system writes it in a damage formula ("bludgeoning"), in the client's language; anything
+     else (misinformation text) as it is */
+  static damageType(type) {
+    const label = CONFIG.PF2E.damageRollFlavors[type];
+    return label ? game.i18n.localize(label) : type;
   }
 
   static test(a) {
