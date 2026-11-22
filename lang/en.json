@@ -76,6 +76,7 @@
       "LinkedActors": "Linked Actors",
       "DuplicateActors": "Duplicate Actors",
       "NoDuplicates": "No duplicates. Drag in actors or import.",
+      "ImportDuplicates": "Import",
       "DuplicatesLinkedInfo": "{nr} duplicate actors linked",
       "NewLink": "New Link",
       "NewLinkTip": "Drag In Actor To Link",
